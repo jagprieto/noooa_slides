@@ -1,1 +1,185 @@
-default
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualization of USA NOAA Storm Database</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Visualization of USA NOAA Storm Database">
+  <meta name="author" content="José Antonio González Prieto">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Visualization of USA NOAA Storm Database</h1>
+    <h2>Population health and economics damages of USA NOAA Storm Database from 1993 to 2011</h2>
+    <p>José Antonio González Prieto<br/>Developing data products (Coursera 2014)</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>USA NOAA Storm Database</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>1.- USA NOAA Storm database tracks characteristics of major storms and weather events in the United States, including when and where they occur, as well as estimates of any fatalities, injuries, and property damage.</p>
+
+<p>2.- A complete report with the exploratory data analysis and the getting and cleaning data process is available at <a href="http://rpubs.com/jagprieto/23612">report link</a>.</p>
+
+<p>3.- Final report containts 14 event types created at the exploratory data analysis.</p>
+
+<ol>
+<li>Work created for the Peer Assessment 2 at the Reproducible Research course in Coursera (Jul 2014).</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Injuries and fatalities summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>The TORNADO event type is the principal cause of injuries and fatalities. </li>
+<li>Event types WIND and STORM causes no large peaks, so it accumulates data with less variation that the other event types.</li>
+<li>Event types HEAT and FLOOD ocasionally appears and causes a considerable increment in the number of injuries and fatalities but very concentrated in time.</li>
+<li> Event types AVALANCHE and SURF has a superior ratio of fatalities versus injuries, which implies that this kind of events are qualitive (not quantitative) more dangerous.</li>
+<li> Event type HURRICANE causes less injuries/fatalitites than expected if we think about the nature of the event, but we must also consider the possibility of prediction of this kind of events which help us to save lives.</li>
+<li> The difficult to predict AVALANCHE and SURF could also be a good clue to understand why this kind of events have the highest dangerous ratios.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Damages summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>The STORM event type is the principal cause of damages, altough it was not one of the principal causes in population health.</li>
+<li>The HURRICANE, TORNADO AND FLOOD event types causes almost the total of the non STORM damages.</li>
+<li>We can observe that the most dangerous events: AVALANCHE and SURF have a low impact in the economics results.</li>
+</ol>
+
+<p>The mean as standard deviation of damages in million dollars by state are:  Mean = 4553.45,  Standard deviation = 9308.21 .</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>USA geographic summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>States TX, LA, OK, AR, MO, IA, MN, WI, IL, TN, AL, GA, MI, KY, OH, FL, PA and NC concentrates the mayor impact events with respect to population health. </li>
+<li>The mean as standard deviation of injuries are: Mean = 2332.10 and  Standard deviation = 3109.75. </li>
+<li>The mean as standard deviation of fatalities are: Mean = 41.97 and  Standard deviation = 303.66 . </li>
+<li>The south east region (LA, TX, AL, MS, FL) have the larger impact in ecomonomics because of climatic events.</li>
+<li>The mean as standard deviation of damages in million dollars by state are: Mean  = 4553.45, Standard deviation = 9308.21 .</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>USA NOAA Storm visualizer</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Shiny application that includes the possibility to filter information based on:</p>
+
+<ol>
+<li>Population health and economics damages : fatalities, injuries, and damages.</li>
+<li>Year range from 1993 to 2011 (where the information is more reliable.</li>
+<li>Accumulative (from 1993) or independent year data visualization.</li>
+<li>Bar plot with event type distribution or USA map distribution.</li>
+<li>General statistics (median, variance, max and min values).</li>
+</ol>
+
+<p>Available at : <a href="https://jagprieto.shinyapps.io/NOOA_VISUALIZER/">NOAA visualizer</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='USA NOAA Storm Database'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Injuries and fatalities summary'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Damages summary'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='USA geographic summary'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='USA NOAA Storm visualizer'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
